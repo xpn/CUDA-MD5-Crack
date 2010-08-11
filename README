@@ -1,0 +1,13 @@
+This is a CUDA program so can only be used by people with NVidia Graphics cards and CUDA SDK installed.
+
+This program is part of a paper that I'm writing on GPU in the security scene and is also my first ever CUDA program.
+
+To use the program, you must provide a wordlist (a sample wordlist is provided) and provide an MD5 hash to crack. This is quite fast, cracking over 3 million words per second on my Asus Nvidia GTS 250, Phenom x4 2Gb Ram. 
+
+Feel free to comment.
+
+To build this, you must have cuda installed. The Makefile uses the default location of /usr/local/cuda, but you can modify this. Just type 'make' to build the file as 'main'. The following build options are available
+
+-DDEBUG		- 	Will have the GPU pass back memory with MD5 registers for verification
+-DBENCHMARK	-	Will print benchmark figures
+-DGPU_BENCHMARK	-	Will benchmark the GPU kernel
